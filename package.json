@@ -1,0 +1,55 @@
+{
+  "name": "llt800",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run tslint && npm run build && npm run copy-dts",
+    "build": "tsc -p .",
+    "copy-dts": "cpx \"./index.d.ts\" \"./dist/\"",
+    "test": "jest",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suyu0925/llt800.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suyu0925/llt800/issues"
+  },
+  "homepage": "https://github.com/suyu0925/llt800#readme",
+  "dependencies": {
+    "mobile-operator": "^0.1.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "@types/debug": "0.0.29",
+    "@types/dotenv": "^4.0.0",
+    "@types/jest": "^19.2.4",
+    "@types/node": "^7.0.31",
+    "@types/request": "0.0.43",
+    "cpx": "^1.5.0",
+    "debug": "^2.6.8",
+    "dotenv": "^4.0.0",
+    "jest": "^20.0.4",
+    "moment": "^2.18.1",
+    "ts-jest": "^20.0.6",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
