@@ -21,8 +21,12 @@ class Llt800 {
   public async getBalance() {
     return api.getBalance(this.option)
   }
+
+  public parseCallback(data: object) {
+    return api.parseCallback(this.option, data)
+  }
 }
 
-export { Option, Range, Status } from './lib/api'
+export { IReport, Option, Range, Status } from './lib/api'
 
 export default Llt800

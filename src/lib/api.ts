@@ -4,7 +4,7 @@ import * as moment from 'moment'
 import * as api from './api'
 import * as request from './request'
 
-export { Option, Range, Status } from './request'
+export { IReport, Option, Range, Status } from './request'
 
 export async function getBalance(option: request.Option) {
   const getBalanceRequest: request.IGetBalanceRequest = {
@@ -43,4 +43,8 @@ export async function queryOrder(option: request.Option, outTradeNo: string) {
     v: '1.1'
   }
   return await request.queryOrder(option, queryOrderRequest)
+}
+
+export function parseCallback(option: request.Option, data: object) {
+  return request.parseCallback(option, data)
 }

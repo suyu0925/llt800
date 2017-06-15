@@ -183,3 +183,20 @@ export async function queryOrder(option: Option, queryOrderReq: IQueryOrderReque
     })
   }) as Promise<IReport[]>
 }
+
+export function parseCallback(option: Option, data: object) {
+  // turn infos to a array forced
+  if (!Array.isArray(data)) {
+    data = [data]
+  }
+
+  // static cast to IReport[]
+  const reports: IReport[] = data as IReport[]
+
+  // check the report simplely
+  if (!reports[0].Status) {
+    return null
+  }
+
+  return reports
+}

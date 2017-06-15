@@ -37,4 +37,6 @@ export default class Llt800 {
   public queryOrder(outTradeNo: string): Promise<IReport[]>
 
   public getBalance(): Promise<number>
+
+  public parseCallback(option: Option, data: object): IReport[]
 }
