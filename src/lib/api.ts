@@ -48,3 +48,7 @@ export async function queryOrder(option: request.Option, outTradeNo: string) {
 export function parseCallback(option: request.Option, data: object) {
   return request.parseCallback(option, data)
 }
+
+export function feedback(done: boolean) {
+  return request.feedback(done)
+}

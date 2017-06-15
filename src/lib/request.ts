@@ -200,3 +200,7 @@ export function parseCallback(option: Option, data: object) {
 
   return reports
 }
+
+export function feedback(done: boolean) {
+  return done ? 'ok' : 'not ok'
+}

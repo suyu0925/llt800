@@ -39,4 +39,6 @@ export default class Llt800 {
   public getBalance(): Promise<number>
 
   public parseCallback(option: Option, data: object): IReport[]
+
+  public feedback(done: boolean): string
 }

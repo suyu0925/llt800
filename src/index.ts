@@ -25,6 +25,10 @@ class Llt800 {
   public parseCallback(data: object) {
     return api.parseCallback(this.option, data)
   }
+
+  public feedback(done: boolean) {
+    return api.feedback(done)
+  }
 }
 
 export { IReport, Option, Range, Status } from './lib/api'
